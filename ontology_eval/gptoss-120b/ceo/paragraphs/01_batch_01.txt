@@ -1,0 +1,61 @@
+########## RUBRIC — C2, C5 (per paragraph) ##########
+
+You are grading the COMPLETENESS of an extraction. For each item you get a PARAGRAPH from a
+scientific paper and EVERY triple the extractor produced from it (sometimes none).
+
+Your question is the opposite of precision: **what did the extractor MISS?**
+
+Only count things a knowledge graph of this kind should hold: named methods, models,
+datasets, metrics, materials, tasks, and the explicit relations between them. Do NOT count
+narrative asides, hedges, citations, or background prose.
+
+C2 — CONCEPT COMPLETENESS: are the important concepts in this paragraph present in the triples?
+  COMPLETE  every important concept appears somewhere in the triples
+  PARTIAL   some important concepts captured, others missed
+  POOR      most important concepts missing, or nothing extracted from a content-rich paragraph
+
+C5 — RELATION COMPLETENESS: are the important relations stated in this paragraph extracted?
+  COMPLETE  every clearly-stated important relation is captured
+  PARTIAL   some captured, others missed
+  POOR      most missed, or nothing extracted where relations are clearly stated
+
+If a paragraph genuinely holds nothing extractable (pure narrative, a heading, an author
+list), score BOTH as COMPLETE and say so in the note — an empty extraction is correct there.
+
+Return ONE JSON object, no fences:
+
+{"verdicts": [
+  {"para_key": "<key>", "C2": "...", "C5": "...",
+   "missed_concepts": ["..."], "missed_relations": ["subject -> relation -> object"],
+   "note": "<short>"}
+]}
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: linkpred2015#1 -----
+PARAGRAPH:
+The technologies of semantic web and linked data have begun connecting world's data through the Internet [1]. Biodiversity observational data is one of timely issues of linked open data. It has been gathered and shared for several years by some research communities such as GBIF1, LODAC2, TDWG3, etc., so information of living things throughout the world has started linking. In Japan, Linked Open Data for ACademia (LODAC) has collected taxon concepts in Resource Description Framework (RDF)4 1 Linked Open Data for ACademia (http://lod.ac) 2 Global Biodiversity Information Facility (http://www.gbif.org) 3 Biodiversity Information Standard (http://www.tdwg.org) 4 http://www.w3.org/TR/rdf11-concepts and provided Simple Protocol and RDF Query Language (SPARQL)5 endpoint for public access [2]. It results in a great benefit for scientists and people who are inter- ested in the interconnected information of biodiversity. Moreover, LODAC and National Museum of Nature and Science6 have started col- lecting links of fungus-host interactions from a list of fungi recorded in Japan [3] and transforming them into RDF. This project is initiated not only for offering an online dataset of interspecies interaction but also preforming a recommendation system for predicting potential links of species. It becomes a navigator for biologists to make further biological observation and help them to reduce observation's cost including time and budget.
+
+TRIPLES EXTRACTED (1):
+    (Linked Open Data for ACademia (LODAC)) --uses--> (Resource Description Framework (RDF))
+
+----- para_key: tripplanner2020#18 -----
+PARAGRAPH:
+Our recommender system and application provide a key feature to produce a trip plan based on a few user criteria. Some criteria are clearly defined (input trip_event), and some are flexible (input pref_event). This feature is suitable for users who do not have time to make a trip plan as mentioned by the persona in the introduction section. Us- ers sometime need a complete trip schedule, but they do not need a really perfect trip plan, because they prefer to spend the any free time for traveling activities. Thus, this application can support their requirement. As we mentioned about the result of our survey in the introduction section, there are 30.6% of users who do not prefer to do a trip plan. It is because they do not need to spend a lot of time to do the plan, and 83.4% of samples need recommended trip plans that allow them to customize easily. As the process of our recommendation model, the trip plan is corresponding to the features of attractions such as open weekdays, times to spend, favorite times and months, and feasible routes. As we reviewed, most related work [8-11] placed im- portant to the technique of trip pattern recognition and trajectory mining. They did not much mention about the aspects of pois. In addition, As comparing to related applica- tions, Google Travel [2], Inspirelock [12], and Roadtrippers [13] provide information and ready recommend plans, but they do not have a flexible way to customize the trip based on user constraints and features of tourist places.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: csysguard2024#18 -----
+PARAGRAPH:
+This section provides a detailed overview of the methodology used in our study, focusing on the design and data handling of cSysGuard.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: pesticide2025#35 -----
+PARAGRAPH:
+The development of a low-cost, portable spectrophotometer has culminated in a production cost of approximately $4.5. The design was conceived with the explicit purpose of subjecting resultant images to image processing and machine learning analyses. The device captured images with two spectral bands. In one band, light traversed an empty path, serving as the reference spectral band. In the other spectral band,
+
+TRIPLES EXTRACTED (0):
+    (none extracted)

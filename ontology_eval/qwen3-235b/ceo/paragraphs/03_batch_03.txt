@@ -1,0 +1,30 @@
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: eyelandmark2024#10 -----
+PARAGRAPH:
+A total of around 9,000 rows of data were gathered from all three models, recording some duplicate entries resulting from the models predicting the same landmark multiple times. This dataset will undergo further preprocessing using rules-based selection algorithms proposed in this paper. The overall algorithms are demonstrated in Fig 5. Finally, the processed data will be stored in both pickle and CSV file formats for subsequent application uses. In the final preprocessing in Fig 5, a new list will be created from the data from each row of detected landmark which contains image name, class name, detection confidence, and coordinate x-y midpoint of the detected point. Given that detect landmarks are comes in x, y, w, h format, each x-y midpoint is calculated from the average values of x, w and y, h. After all the data in a list were created, the high confidence value of each image name was selected by a simple maximum selection algorithm and updated the selected list of data into a new database, both left eye and right eye were computed respectively. This pre-processing process reduces the number of detected landmarks from 9000 rows to 154 rows, which are 154 volunteers participated, the final dataset can be seen in the Table IV – Final Landmarks Dataset.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: traveltime2022#0 -----
+PARAGRAPH:
+This study proposes a method by which to predict the travel time of vehicles on long- distance road segments in Thailand. We adopted the Self-Attention Long Short -Term Memory (SA-LSTM) model with a Butterworth low-pass filter to predict the travel time on each road segment using historical data from the Global Positioning System (GPS) tracking of trucks in Thailand. As a result, our prediction method gave a Mean Absolute Error (MAE) of 12.15 min per 100 km, whereas the MAE of the baseline was 27.12 min. As we can estimate the travel time of vehicles with a lower error, our method is an effective way to shape a data-driven smart city in terms of predictive mobility.
+
+TRIPLES EXTRACTED (1):
+    (SA-LSTM) --uses--> (Butterworth low-pass filter)
+
+----- para_key: reststop2018#15 -----
+PARAGRAPH:
+Since, the prediction method PNext has been introduced, the next step is to measure the accuracy of the proposed method. Our experiment is done by the following steps: 1) From the dataset of the relation (s0→s1→s2, vtype, time1), the actual next stop s2 will be replaced by any possible next rest stops that are located within a configured distance from a given s1. In this case, we used 300 km as a configured distance. Thus, it can be sa, sb, sc, sd, and se. 2) Find ranking scores for all possible rest stops using Eq. 5., for example, PNext(sa | s0→s1), PNext (sb | s0→s1), PNext (sc | s0→s1), PNext (sd | s0→s1), and PNext (se | s0→s1). 3) Compare the ranking scores of all possible next rest stops with the score of actual next rest stop using the evaluation method named AUC, which is described hereafter. 5., use different α, β, and γ for finding proper coefficients of the equation. The different coefficients (α, β, γ) that we use in this experiment are (1,0,0), (0,1,0), (0,0,1), (1,1,0), (1,0,1), (0,1,1), and (1,1,1) in order to find an appropriate combination of scoring functions based on the AUC result. 5) Adjust the α, β, and γ for creating an accurate model for this dataset that gives the highest AUC value. This experiment evaluates each coefficient one by one. If a coefficient is focused, its value is changed while the others are constant. For example, if α is evaluated, the value of α is slightly increased from 0 to 1, while β and γ remain 0.5.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: eyelandmark2024#12 -----
+PARAGRAPH:
+Furthermore, the IoU metric of 0.612 underscores the model's capability to precisely delineate the eye landmarks, exhibiting a substantial overlap between predicted and actual positions. In contrast to the study by Viola, P., & Jones, M. (2001) [1], which achieved an accuracy score of 0.884 with 507 facial images , the research conducted by Amato, G., Falchi, F., Gennaro, C., & Vairo, C. (2018) [2] obtained a higher accuracy score of 0.95 with 64 landmarks. However, it is important to note that the latter model faces limitations in name eye gaze 0 1 2 3 4 5 6 7 8 detecting facial landmarks when individuals are wearing face masks. Furthermore, corneal light reflection detection holds pivotal significance in diagnosing various eye conditions and diseases. Møller-Pedersen, Torben (2004)[6] proposed a new category of corneal transparency disorders, emphasizing the role of abnormal cellular-based reflections, while Newkirk, Kimberly (2007)[7] identified UVR-induced corneal degeneration in mice, including loss of keratocytes and cataract formation. These studies collectively underscore the importance of corneal light reflection in the diagnosis and understanding of various eye diseases. The precise identification and analysis of corneal light reflections play a fundamental role in ophthalmological examinations, aiding in the assessment of ocular alignment and abnormalities such as strabismus or amblyopia.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)

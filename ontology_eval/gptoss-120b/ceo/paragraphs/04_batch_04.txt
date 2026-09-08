@@ -1,0 +1,34 @@
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: eyelandmark2024#7 -----
+PARAGRAPH:
+img1 L Mid 84.9% 1 (108,95) img1 L Mid 82.0% 2 (184,103) img1 L Mid 83.7% 3 (220,169) img1 L Mid 83.1% 4 (177,158) img1 L Mid 72.6% 5 (127,167) img1 L Mid 83.5% 6 (110,133) img1 L Mid 82.7% 7 (186,130) img1 L Mid 85.6% 8 (148,114) img1 R Left 78.3% 0 (63,124) img1 R Left 82.3% 1 (183,98) img1 R Left 74.2% 2 (219,120) img1 R Left 82.3% 3 (238,167) img1 R Left 81.7% 4 (214,185) img1 R Left 74.2% 5 (187,182) img1 R Left 78.8% 6 (175,139) img1 R Left 84.0% 7 (230,149) img1 R Left 83.7% 8 (184,138) The data preparation of Gaze Images is the primary focus of this section. In this study, 154 volunteers participated, with each volunteer having three pictures taken using a mobile phone: a straight gaze, known as a middle gaze (M), a left gaze (L), and a right gaze (R). All the photos collected from actual patients were obtained with their consent for research purposes. After collecting all the data, each facial image will be cropped into two eye image files using a user-defined application. This application also enables users to manually localize nine landmarks from each eye image. These nine landmarks include the Lateral Canthus, Medial Canthus, the site where the conjunctiva merges with the cornea, and the Cornea Light Reflection. While nine eye landmarks were manually labeled using the application, a label file format was created for each cropped eye.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: ugmo2024#10 -----
+PARAGRAPH:
+Bansal, "Detecting moments and highlights in videos via natural language queries," dvances in Neural Information Processing Systems, vol. Jin, "Scene classification for sports video summarization using transfer learning," Sensors, vol. Mishra, "ideo processing using deep learning techniques: A systematic literature review," IEEE Access, vol.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: traveltime2022#35 -----
+PARAGRAPH:
+The aim of our work was to improve the accuracy of a travel time prediction model using a time-series technique. Our dataset was the GPS transactions of trucks in Thailand, as depicted in Figure 3. A closer look at the data indicated that the location of trucks with a timestamp could be viewed as time-series data. Thus, we sampled the raw data according to the average hourly travel times of 10 road segments of a long distance, as presented in Table 1. To create an approach for the generation of a travel time prediction model, several time-series forecasting techniques were studied from related works. (1) In the first experiment, we attempted to find a suitable time-series technique for our baseline. The result of the experiment was that the LSTM provided the best performance. The results from Table 3 were interpreted as follows: the LSTM model provided an error of ±27.12 min in every 100 km. This error range, being almost half an hour, was regarded as being too high in error. Thus, in this case, this issue became the main focus of our study, and it was our challenge to solve this problem. (2) In the second experiment, the LSTM was improved with the addition of self-attention, becoming an SA-LSTM. The results presented in Table 4 show that the SA-LSTM was better than the LSTM. Although the MAE was slightly reduced, MAE (minutes) per 100 km % Improvement Baseline Our Approach this was a sign of enhancement of the model.
+
+TRIPLES EXTRACTED (3):
+    (SA-LSTM) --uses--> (self-attention)
+    (SA-LSTM) --comparesagainst--> (LSTM)
+    (LSTM model) --achieves--> (error of ±27.12 min)
+
+----- para_key: parkingyolo2023#12 -----
+PARAGRAPH:
+The proposed algorithm utilizes a state-of-the-art object detection algorithm called YOLOv8 [39] for detecting vehicles . For tracking vehicles , two object tracking algorithms were implemented, Deep SORT (Simple Online Real Tracking ) [11] and Observation- Centric SORT (OC-SORT) [38]. In-depth discussion of the algorithm is included in the subsection below.
+
+TRIPLES EXTRACTED (3):
+    (YOLOv8) --addresses--> (detecting vehicles)
+    (Deep SORT) --addresses--> (tracking vehicles)
+    (OC-SORT) --addresses--> (tracking vehicles)

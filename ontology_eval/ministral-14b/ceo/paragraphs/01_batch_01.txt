@@ -1,0 +1,71 @@
+########## RUBRIC — C2, C5 (per paragraph) ##########
+
+You are grading the COMPLETENESS of an extraction. For each item you get a PARAGRAPH from a
+scientific paper and EVERY triple the extractor produced from it (sometimes none).
+
+Your question is the opposite of precision: **what did the extractor MISS?**
+
+Only count things a knowledge graph of this kind should hold: named methods, models,
+datasets, metrics, materials, tasks, and the explicit relations between them. Do NOT count
+narrative asides, hedges, citations, or background prose.
+
+C2 — CONCEPT COMPLETENESS: are the important concepts in this paragraph present in the triples?
+  COMPLETE  every important concept appears somewhere in the triples
+  PARTIAL   some important concepts captured, others missed
+  POOR      most important concepts missing, or nothing extracted from a content-rich paragraph
+
+C5 — RELATION COMPLETENESS: are the important relations stated in this paragraph extracted?
+  COMPLETE  every clearly-stated important relation is captured
+  PARTIAL   some captured, others missed
+  POOR      most missed, or nothing extracted where relations are clearly stated
+
+If a paragraph genuinely holds nothing extractable (pure narrative, a heading, an author
+list), score BOTH as COMPLETE and say so in the note — an empty extraction is correct there.
+
+Return ONE JSON object, no fences:
+
+{"verdicts": [
+  {"para_key": "<key>", "C2": "...", "C5": "...",
+   "missed_concepts": ["..."], "missed_relations": ["subject -> relation -> object"],
+   "note": "<short>"}
+]}
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: strabismus2026#46 -----
+PARAGRAPH:
+Future work should aim to further reduce false-negative results while maintaining acceptable specificity.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: vehiclemake2025#2 -----
+PARAGRAPH:
+Current Vehicle Make Model Recognition (VMMR) tech- nologies remain a significant area of interest for researchers and industries, since they play a crucial role in traffic management, tolling, and vehicle re- identification . Specif- ically, the free-flow tolling system worked with license plate recognition from frontal vehicle images. The current system in Thailand uses only the license plate to identify an individual car and generate an invoice, and it also uses the detected vehicle make and model to help the operator confirm the vehicle information when the system cannot identify the license. Moreover, the free-flow expressway system that is used in Thailand has a relatively high installation cost because detecting and classifying vehicles requires high-performance The associate editor coordinating the review of this manuscript and approving it for publication was Antonio J. This work is licensed under a Creative Commons Attribution 4.0 License. However, relying on only license plate recognition , the system may face the problems of misreading unclear license plates and vehicle registration fraud. There- fore, using other attributes of the vehicle to consider, such as the brand of the vehicle , may help charge the service fee for the correct vehicle . In addition, the result can lead to the arrest of fraud related to illegal vehicle registrations.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: roadwaylight2018#21 -----
+PARAGRAPH:
+• The decision tree model is configured by using the Gini index(13) to measure the quality of a split. • The configuration of ANN for our experiment is that there is one hidden layer having 3 units with a sigmoid activation function, the number of maximum iterations is 5000, the tolerance for the stopping criterion is 0.0001, and the learning rate is 0.001. • For the SVM, according to the visualization in Fig. 7, there are overlapped class distributions, and a radial basis function (RBF) kernel becomes a proper kernel for our experiment. In addition , the configuration of this classifier is that the penalty parameter (c) of the error term is 1.0, the kernel coefficient (gamma) is 0.3, the number of maximum iterations is 5000, and the tolerance for the stopping criterion is 0.0001. To find the proper classification method, we train and test each model using cross-validation to obtain the minimum root mean-square error (RMSE) and calculating a correlation for measuring the relationship between input and output.(13) In addition , we fit the coefficient of the IRI equation against the data from RoadNet.(20) Lastly, we plot the analytical results onto a map. For street lighting , if the illuminance is greater than 3 lx, as recommended by the guidelines,(14) the road is colored green, otherwise a dark line is used. For pavement failure, the location of each defect is plotted with a dot whose size corresponds to its IRI.
+
+TRIPLES EXTRACTED (11):
+    (decision tree model) --configures--> (Gini index)
+    (ANN) --configures--> (5000 maximum iterations)
+    (ANN) --configures--> (0.0001 tolerance for stopping criterion)
+    (ANN) --configures--> (0.001 learning rate)
+    (SVM) --configures--> (radial basis function (RBF) kernel)
+    (SVM) --configures--> (1.0 penalty parameter (c))
+    (SVM) --configures--> (0.3 kernel coefficient (gamma))
+    (SVM) --configures--> (5000 maximum iterations)
+    (SVM) --configures--> (0.0001 tolerance for stopping criterion)
+    (RMSE) --evaluates--> (minimum root mean-square error)
+    (IRI equation) --trainedon--> (RoadNet data)
+
+----- para_key: routepred2023#2 -----
+PARAGRAPH:
+To describe our work, our work is introduced in Section I, the related work and background are reviewed in Section II, our method is described in Section III, the experimental result is shown in Section IV, and the conclusion is drawn in Section V. Authorized licensed use limited to: King Mongkuts Institute of Technology Ladkrabang provided by UniNet. Downloaded on August 26,2026 at 14:04:19 UTC from IEEE Xplore. Kittikom Boonrod School of Engineering, King Mongkut's Institute of
+
+TRIPLES EXTRACTED (0):
+    (none extracted)

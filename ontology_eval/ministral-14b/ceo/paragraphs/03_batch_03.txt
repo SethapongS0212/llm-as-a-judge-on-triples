@@ -1,0 +1,32 @@
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: strabismus2026#22 -----
+PARAGRAPH:
+In the step of feature engineering, as performed in Fig. 2 (D), five geometric ratios (RT1–RT5) were computed using selected landmarks in the horizontal line. According to the clinical expertise of the ophthalmologists in our research team, the pupil and corneal light reflex are approximately centered in orthotropic eyes during primary gaze, with relatively balanced visible scleral exposure on the nasal and temporal sides. Horizontal strabismus changes this relationship by shifting the corneal light reflex and altering the relative scleral show across gaze positions. On that basis, the selected landmarks were intended to capture three complementary geometric domains: overall eye width for normalization, nasal and temporal exposed scleral segments, and the horizontal position of the corneal light reflex relative to the limbal boundaries. We therefore used horizontal distances between selected landmarks as key features, specifically the medial canthus (P1), temporal canthus (P4), medial limbus (P7), temporal limbus (P8), and central corneal light reflex (P9). These points created geometric ratios (RT1–RT5) as expressed in Fig. All distances were normalized to eye width. • EW: Eye width was defined as the distance between the medial canthus (P1) and temporal canthus (P4), as expressed by the following equation. • RT1: The medial scleral area is represented by the distance ratio between medial canthus (P1) and medial limbus (P7) normalized by the eye width.
+
+TRIPLES EXTRACTED (1):
+    (RT1) --uses--> (eye width)
+
+----- para_key: csysguard2024#7 -----
+PARAGRAPH:
+Although cloud applications introduce innovative resource management strategies, they also present challenges in monitoring resources . Its variable nature complicates the effective tracking of fluctuating system metrics. Conse- quently, resource utilization can result in inefficiency and diminished system performance. It underscores the need for more flexible monitoring methods to precisely assess and adapt to the ever-changing requirements of cloud environments. Therefore, there is growing interest in leveraging machine learning techniques to address these challenges [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28]. Machine learning- driven predictive analytics, widely used in many fields [29], can analyze complex data patterns to identity potential anomalies. This proactive approach enhances system reliability and resource allocation, ensuring scalable and responsive services . Inte- grating machine learning with cloud computing represents a significant advancement in improving system resource management.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: ugmo2024#1 -----
+PARAGRAPH:
+The official video records of these occasions, however, are usually rather long and contain a large number of graduates receiving their degree, while an individual graduate airtime is quite quick. Rewatching and finding oneself from the full multi-hour ceremony film is inconvenient and time- consuming for graduates and their families, whose primary concern is merely preserving the brief moment when their graduate crosses the stage. These long ceremony recordings must be automatically edited into brief, customized video segments that only include the most significant portions for each individual graduate. An automated video editing system designed specifically for this use case is presented in this paper. The whole video recording of a graduation ceremony is fed into the system, which then split a personal clip for each graduate, that solely feature their favorite moments from earning their degree. These customized videos could be shared online and more readily stored as mementos. Our method tracks the motions of the graduates across the stage and through the crowd by using computer vision and machine learning techniques. It then extracts the pertinent portions of the original film that were precisely targeted at each graduate during their degree conferral.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: strabismus2026#31 -----
+PARAGRAPH:
+Other parameters set precision and stability features like initializer_range = 0.01, layer_norm_eps=1e-5, and batch_norm_eps=1e-5, while the backbone is configured with use_pretrained_backbone=False and freeze_backbone_batch_norms=True. In addition, the tuned hyperparameter for a Random Forest contains 30 estimators or trees to be constructed, where each base decision tree will utilize the Gini impurity to evaluate the quality of a split. In addition, the feature subset size considered at each split is set to the square root of the maximum number of features via max_features='sqrt'. For the SMOTE, the number of neighbors was set to 5, and the sample strategy of True: False cases was up to 200:200.
+
+TRIPLES EXTRACTED (3):
+    (Random Forest) --configures--> (30 estimators or trees to be constructed)
+    (Random Forest) --configures--> (Gini impurity)
+    (SMOTE) --configures--> (5 neighbors)

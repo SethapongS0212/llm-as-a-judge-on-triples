@@ -1,0 +1,62 @@
+########## RUBRIC — C2, C5 (per paragraph) ##########
+
+You are grading the COMPLETENESS of an extraction. For each item you get a PARAGRAPH from a
+scientific paper and EVERY triple the extractor produced from it (sometimes none).
+
+Your question is the opposite of precision: **what did the extractor MISS?**
+
+Only count things a knowledge graph of this kind should hold: named methods, models,
+datasets, metrics, materials, tasks, and the explicit relations between them. Do NOT count
+narrative asides, hedges, citations, or background prose.
+
+C2 — CONCEPT COMPLETENESS: are the important concepts in this paragraph present in the triples?
+  COMPLETE  every important concept appears somewhere in the triples
+  PARTIAL   some important concepts captured, others missed
+  POOR      most important concepts missing, or nothing extracted from a content-rich paragraph
+
+C5 — RELATION COMPLETENESS: are the important relations stated in this paragraph extracted?
+  COMPLETE  every clearly-stated important relation is captured
+  PARTIAL   some captured, others missed
+  POOR      most missed, or nothing extracted where relations are clearly stated
+
+If a paragraph genuinely holds nothing extractable (pure narrative, a heading, an author
+list), score BOTH as COMPLETE and say so in the note — an empty extraction is correct there.
+
+Return ONE JSON object, no fences:
+
+{"verdicts": [
+  {"para_key": "<key>", "C2": "...", "C5": "...",
+   "missed_concepts": ["..."], "missed_relations": ["subject -> relation -> object"],
+   "note": "<short>"}
+]}
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: microwave2018#10 -----
+PARAGRAPH:
+A kick activation method is one of solutions for addressing a hand-free operation issue. This paper attempts to detect a kicking gesture from a microwave sensor because it works well under various conditions of environment especially in the outdoor areas such as opening a car's trunk. The idea is that when a human kicks into the air nearby the sensor, signal data from the sensor are generated. After that, a microcontroller processes a one-second-length sliding window of the sensor's signal for classifying the kick and non-kick actions based on the supervised dataset. Signals between these actions are clearly distinguished using the signal visualization. It also found that the logistic regression, which is a known data analytic method, can be used as a classification method to detect the kick gesture; because it provides the best accuracy among all selected classifiers. The parameters of the fit model can be implemented in a microcontroller for creating any kick-activated applications. Furthermore, in fact, there are several kinds of kicking actions such as fast kicking, slow kicking, kicking by left or right foot, etc. In the future, a kick detector will be learned with many kinds of kicking gestures in order to support various inputs from different kick actions. In this case, more features and some multi-label classifiers should be adopted.
+
+TRIPLES EXTRACTED (2):
+    (kick activation method) --addresses--> (hand-free operation issue)
+    (logistic regression) --achieves--> (the best accuracy among all selected classifiers)
+
+----- para_key: linkpred2015#13 -----
+PARAGRAPH:
+In order to demonstrate the feasibility and suitability of the LPII approach, the exper- iment was designed to achieve the following objectives. To prove that our model is suitable for RDF data of interspecies interaction. To prove that the combination of collaborative filtering , community structure, and biological classification provides better prediction result than other ones. To find out the relative importance of roles that collaborative filtering , community structure, and biological classification play in the prediction model.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: csysguard2024#26 -----
+PARAGRAPH:
+This section describes the detailed process of forecast- ing performance metrics. This comprehensive examination covers the intricacies of Level-0 and Level-1 learners, Weight Aggregation, and the approaches used for comparing models and tuning hyperparameters in regression models.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: roadwaylight2018#8 -----
+PARAGRAPH:
+A pavement failure is a defect on the road surface resulting from the low quality of the street, a change in the road environment, or material degradation. There are many pavement failures such as potholes, bumps, ruts, slippage cracks, joint reflection cracks, and edge cracks.(9–12) These defects result in different severities of accidents, so the issue must be resolved in order to improve the safety of citizens. In this case, government agencies involved in this issue should know every defect in order to have a precise plan to repair it. One task is to monitor each failure, which is commonly done visually, as can be seen in the example report from the Department of Rural Roads of Thailand(15) in Fig. The pavement failure can be measured from the roughness of the road using the international roughness index (IRI), which is an index that shows the roughness of a road for measuring longitudinal road profiles.(16) It basically uses the quarter-car vehicle model for calculation considering a linear spring of stiffness and a linear damper with a damping rate.(17) In addition , an accelerometer can be used to estimate the IRI, but it must be calibrated first.(17–19) The linear correlation between car
+
+TRIPLES EXTRACTED (0):
+    (none extracted)

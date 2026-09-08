@@ -1,0 +1,37 @@
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: pesticide2025#21 -----
+PARAGRAPH:
+The application of machine learning methodology for predicting KMnO4 concentrations, utilizing images acquired from a low-cost portable spectrophotometer, has yielded highly encouraging out comes. Four distinct algorithms – namely, SVP, RF, MLP, and XGB – were employed. Additionally, a 5-fold cross-validation methodology considering the analysis of four optimal features was applied. Accuracy SVR 'C': [0.1, 1, 10, 100, 1000], 'kernel': ['linear', 'rbf', 'sigmoid'] RF 'n_estimators': [50, 100, 200, 300, 400, 500], 'max_depth': [None, 10, 20, 30, 40, 50], 'min_samples_split': [2,5,10,15,20] MLP 'hidden_layer_sizes': [(50, 50), (75, 75), (100,100), (25,25)], 'activation': ['relu', 'tanh'], 'alpha': [0.0001, 0.001, 0.01] XGB 'n_estimators': [100, 200, 300, 400, 500], 'max_depth': [3,4,5,6,7,8], 'learning_rate': [0.01, 0.05, 0.1, 0.5, 1] evaluations based on the comparison between predicted and actual concentrations, as summarized in Table 3, indicate that the XGB algo rithm achieved the lowest error of combined unseen data sets (test and validation sets) of 1.48 %. Notably, the error obtained from the current approach was even lower than that of the standard method. Across all datasets, the XGB algorithm demonstrated slightly supe rior performance compared to SVR, RF, and MLP. Notably, the test and validation sets exhibited minimal accuracy reduction, affirming the effectiveness of the cross-validation approach.
+
+TRIPLES EXTRACTED (3):
+    (XGB) --comparesagainst--> (SVR)
+    (XGB) --comparesagainst--> (RF)
+    (XGB) --comparesagainst--> (MLP)
+
+----- para_key: pesticide2025#0 -----
+PARAGRAPH:
+Pesticide usage has dramatically increased in recent decades, doubling since 1990 to reach 4.3 million tonnes globally [1]. Over 1,000 different types of pesticides are currently in use, despite their well- documented health and environmental risks [2]. An estimated 11,000 fatalities and 385 million poisonings occur annually due to pesticide exposure [3]. Traditional analytical methods for pesticide detection, such as gas chromatography, mass spectrometry [4], and high- performance liquid chromatography [5], often require expensive equipment and specialized expertise [6,7]. To address these limitations, smartphone-based image analysis has emerged as a promising alterna tive [8]. By leveraging the ubiquity, computational power, affordability, and real-time data processing capabilities of smartphones, these methods offer a convenient and accessible approach to pesticide testing. Optical components like colorimeters, photo- and spectrometers, and fluorimeters can be integrated into smartphones [9] to enable rapid, on- * Corresponding author. https://doi.org/10.1016/j.measurement.2025.116890 Received 12 June 2024; Received in revised form 12 January 2025; Accepted 28 January 2025 Available online 8 February 2025 0263-2241/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: strabismus2026#44 -----
+PARAGRAPH:
+In this study, SMOTE was employed to address class imbalance in a dataset of limited size, which is crucial for improving model training stability and representation of minority classes. However, in some cases where many outliers are found, the synthetic data generated from noise may impact the overall results of the predictive model. To mitigate the issue of noise amplification, we conducted analyses of the synthetic samples by comparing the results against Over-sampling using SMOTE and cleaning using Edited Nearest Neighbors (SMOTE-ENN)23, which is a variant of SMOTE reducing synthesis noise and borderline data. Our prediction approach with the replacing SMOTE with SMOT-EEN resulted in an accuracy of 0.95, which is close to the accuracy of the original experiment using SMOTE. Therefore, the results suggest that the data synthesis was not negatively impacted by noise presented in the processed data. In addition, the dataset was first divided into training and testing sets prior to oversampling, ensuring that SMOTE was applied to the training data and thus avoiding any data leakage into the test set. This design maintains the validity of performance evaluation. Thus, the application of SMOTE under these controlled conditions provides an advantage in enhancing model generalization in small or imbalanced datasets while minimizing the risk of overfitting.
+
+TRIPLES EXTRACTED (5):
+    (SMOTE) --addresses--> (class imbalance in a dataset of limited size)
+    (prediction approach with the replacing SMOTE with SMOT-EEN) --achieves--> (an accuracy of 0.95)
+    (prediction approach with the replacing SMOTE with SMOT-EEN) --comparesagainst--> (original experiment using SMOTE)
+    (dataset) --splitfrom--> (training and testing sets)
+    (SMOTE) --trainedon--> (training data)
+
+----- para_key: vehiclemake2025#16 -----
+PARAGRAPH:
+Last, Filter-Block-DR uses the 1 × 1 convolution method to reduce the size of the input matrix in the standard Filter- Block. The internal structure starts with a 1 × 1 convolution with 16 filters, without using bias or activation function. This is followed by batch normalization and ReLU activation function layers. Next, a 3 × 3 convolution without bias and activation function is applied, where the number of output filters can be specified. This is followed by batch normalization and ReLU activation function layers, ending with MaxPooling with stride. 2) MODEL STRUCTURE The previous subsection presented Filter-Block, Filter-Block- DW, and Filter-Block-DR. They have different internal oper- ations, affecting the number of parameters and computational processes. After establishing the feature extraction using Filter-Blocks, a preliminary model structure was introduced. This structure, built from the three types of Filter-Blocks, is named ''CTv1''. The model structure starts from the top and progresses downward, it consists of six layers of Filter- Blocks. Each layer has a different number of output filters, arranged from fewer to more filters. This approach, which is adopted from ImageNet [1], increases the chances of detecting key features by reducing the matrix dimensions. The chosen numbers of six filters are 32, 64, 128, 512, and 1024 respectively . This format is used in MobileNet model architecture.
+
+TRIPLES EXTRACTED (2):
+    (Filter-Block-DR) --uses--> (1 × 1 convolution method)
+    (CTv1) --comprises--> (six layers of Filter-Blocks)

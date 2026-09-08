@@ -1,0 +1,65 @@
+########## RUBRIC — C2, C5 (per paragraph) ##########
+
+You are grading the COMPLETENESS of an extraction. For each item you get a PARAGRAPH from a
+scientific paper and EVERY triple the extractor produced from it (sometimes none).
+
+Your question is the opposite of precision: **what did the extractor MISS?**
+
+Only count things a knowledge graph of this kind should hold: named methods, models,
+datasets, metrics, materials, tasks, and the explicit relations between them. Do NOT count
+narrative asides, hedges, citations, or background prose.
+
+C2 — CONCEPT COMPLETENESS: are the important concepts in this paragraph present in the triples?
+  COMPLETE  every important concept appears somewhere in the triples
+  PARTIAL   some important concepts captured, others missed
+  POOR      most important concepts missing, or nothing extracted from a content-rich paragraph
+
+C5 — RELATION COMPLETENESS: are the important relations stated in this paragraph extracted?
+  COMPLETE  every clearly-stated important relation is captured
+  PARTIAL   some captured, others missed
+  POOR      most missed, or nothing extracted where relations are clearly stated
+
+If a paragraph genuinely holds nothing extractable (pure narrative, a heading, an author
+list), score BOTH as COMPLETE and say so in the note — an empty extraction is correct there.
+
+Return ONE JSON object, no fences:
+
+{"verdicts": [
+  {"para_key": "<key>", "C2": "...", "C5": "...",
+   "missed_concepts": ["..."], "missed_relations": ["subject -> relation -> object"],
+   "note": "<short>"}
+]}
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: osmotic2026#6 -----
+PARAGRAPH:
+Data collections and preparations A total of 1,654 datapoints pertaining to the osmotic coefficients of 52 quaternary ammonium salts (Quats) have been compiled from 11 distinct sources, as presented in Table 1. Each Quat is described using the Simplified Molecular Input Line Entry System (SMILES). The inputs are separated into cations and anions. Cations are comprised of the number of carbon atoms (C), number of oxygen atoms (O), phenyl groups (c1ccccc1), branches (denoted by brackets () in SMILES), and ionized-nitrogen groups . The ionized-nitrogen groups consist of single branch (H3N+), double branch (H2N+), triple branch (HN+), and quadruple branch (N+). Anions are represented as single groups of fluoride (F-), chloride (Cl-), bromide (Br-), iodide (I-), nitrate (N+([O-])[O-]), and perchlorate ([O-]Cl(= O)(= O) = O). The latter comprises single branch (H3N+), double branch (H2N+), triple branch (HN+), and quadruple branch (N+). An example of the input data frame is illustrated in Fig. The outputs are osmotic coefficients at varying concentrations (in molalities), from which activity coefficients are subsequently calculated using the predicted osmotic coefficients.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: roadwaylight2018#1 -----
+PARAGRAPH:
+The frequencies of road traffic accidents between daytime and nighttime are similar; however, the severity of injuries doubles at night.(1) There are several factors affecting road accidents such as visibility, geometry, lane markings, surface condition, and street lighting .(2,3) This paper focuses on two factors, street lighting and pavement conditions, because they potentially influence the drivers during nighttime driving, and these issues can be fixed without changing the whole structure of a road. Pavement failure is found everyday because of daily usage. In addition , the number of car accidents caused by low street lighting is increasing.(4) With very low road lighting as encountered in the countryside or on secondary roads, drivers for Nighttime Street Safety Assessment by Sensor Data Analysis and Visualization Faculty of Engineering, King Mongkut's Institute of Technology Ladkrabang, ISSN 0914-4935 © MYU K.K. 2268 Sensors and Materials, Vol. 10 (2018) must rely on the light from the headlamps of their car, which, however, is not bright enough to enable drivers to estimate the road conditions precisely as shown in Fig. Some dangerous potholes, most of them cause severe accidents, may not be clearly seen by drivers. There are many news reports about car accidents caused by a poor road environment reported daily.(5–7) In order to improve road safety, government agencies responsible for transportation must watch over and maintain the quality of street surfaces.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: traveltime2022#41 -----
+PARAGRAPH:
+The aim of this study was to introduce an approach for the prediction of travel time for vehicles on long-distance road segments in Thailand. The input data that we collected were truck GPS transactions and included vehicle identifiers, timestamps, latitudes, and longitudes. The raw data, together with road data from Thailand, were processed into time-series data of the average hourly travel time on each road segment in 2019, and the time-series data were split into a training set and a test set, where the sliding window size was 24. In our study, the LSTM was selected as a baseline and had an MAE of 27.12 min per 100 km. After studying the data in detail and conducting several experiments, the SA-LSTM with the Butterworth low-pass filter was adopted as our method, and this provided an error of ±12.15 min for every 100 km, which was 55.20% better than that of the baseline. The results of our experiments suggest that having a predictive travel time using GPS data for each road is practical and is a necessary factor in the improvement of smart mobility. Thus, our work can contribute to the development of a data-driven smart city. However, our work is an early step in the area of travel time prediction in Thailand. In the future, other factors such as weather data and road repair schedules might be considered.
+
+TRIPLES EXTRACTED (5):
+    (LSTM) --achieves--> (MAE of 27.12 min per 100 km)
+    (SA-LSTM with the Butterworth low-pass filter) --achieves--> (error of ±12.15 min for every 100 km)
+    (SA-LSTM with the Butterworth low-pass filter) --comparesagainst--> (LSTM)
+    (time-series data) --splitfrom--> (training set)
+    (time-series data) --splitfrom--> (test set)
+
+----- para_key: videoseg2025#3 -----
+PARAGRAPH:
+SAM2 is employed for tracking target participants due to its precision.
+
+TRIPLES EXTRACTED (1):
+    (SAM2) --addresses--> (tracking target participants)

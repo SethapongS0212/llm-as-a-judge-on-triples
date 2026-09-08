@@ -1,0 +1,30 @@
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: linkpred2015#12 -----
+PARAGRAPH:
+To prepare data for the prediction process, GBipt=(NFungi, NHosts, LExist) is constructed by transforming RDF dataset into a bipartite graph; then GProjFungi = (NFungi, EProjFungi) is built by 𝐸!"#$%&'() = (𝑓!, 𝑓!) 𝑓!, 𝑓! ∈𝑁!"#$% 𝑎𝑛𝑑 Γ(𝑓!) ∩Γ(𝑓!) ≠∅ (5) Next, PCS(f,h) is derived from the idea of [12], if a host h is frequently shared by most fungi under the same community as fungus f, the fungus f is more likely found at the host h. This research considered Naïve Bayes [17], which is a likelihood classification function, to evaluate the probability of finding the fungus f at the host h. Because cluster is known, the probability to find h in the community of f is simply defined by where MC(f), which stands for "Members of Community of", returns all members of the community of the fungus f; and 1{(fi,h)∈LExist} returns 1 if a link (fi,h) is existent, otherwise 0; and 1{(fi,hj)∈LExist} returns 1 for every existent link given by fi. Last, PBC(f,h) is computed based on probability of a host h comparing to all hosts shared by all fungi under the same biological classification as the fungus f. This func- tion is expressed by The definition is similar to equation (7), whereas the term MB(f), which stands for "Members of Biological classification of", returns the set of all fungi under the same biological classification than a fungus f.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: routepred2023#11 -----
+PARAGRAPH:
+Thus, there are 4 iterations of building a model, while the different parts of data are used as a test set in each round, then the Hit@3 of 4 rounds are averaged to be a result demonstrating in the next section.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: ugmo2024#4 -----
+PARAGRAPH:
+The graduate stopping in the middle of the stage, extending their arm for a handshake, or accepting the diploma are examples of patterns that the system recognizes, as shown in Fig 4. This "degree conferral" pose pattern's peak is localized within the frames that serve as the bounds for each highlight clip extraction. The result from YOLOv8 pose estimation contains 17 key points, as shown in Fig 4. As we take a look at frames carefully, the key points number 6, 8, 10, and 12 which are a right shoulder, a right elbow, a right wrist, and a right hip are emphasized to be important key points. The more analysis is to estimate proper angles A (10-8-6) and B (8-6-12) as displayed in Fig 5. Among many of degree conferral poses; the angle A is usually between 150° and 180°, and the angle B is usually between 50° and 70°. This includes spotting routines, which involve approaching the center stage area, pausing to stand, extending one arm outward, and then turning to face a specific direction – the standard gestures associated with being shook hands and given a diploma. After detecting frames containing degree conferral poses which is satisfying the conditions of angles A and B, the center frame in each selected frame interval represents the middle point on a clip. For example, if an interval frame numbers between 10003 and 10015 are detected as degree conferral, the middle point becomes the frame number 10009.
+
+TRIPLES EXTRACTED (1):
+    (YOLOv8 pose estimation) --produces--> (17 key points)
+
+----- para_key: tripplanner2020#0 -----
+PARAGRAPH:
+Making a trip plan is a key activity for having a satisfying trip for tourists. However, as we survey, there are many users do not need to spend a lot of time to write the plan, and it becomes a pain point for users. The users prefer to have a simple way to create a whole trip plan from a few users' constraints, and the users just customize some items for their satisfaction. Thus, this work introduces a recommender system that mainly employs the genetic algorithm for generating a trip plan. The approach accepts a few roughly input require- ments from users, and then it creates a whole trip schedule and allows users to modify. To have a quality trip plan, any places and times in the plan have to correspond to places' categories, open weekdays, times to spend, favorite day- times and months, and possible routes. A web application for trip planner is de- veloped to demonstrate the suitability and feasibility of the proposed recom- mender system. After that, the user feedback and usage statistic present the high degree of user satisfaction and opportunity to improve tourism of any city.
+
+TRIPLES EXTRACTED (1):
+    (recommender system) --uses--> (genetic algorithm)

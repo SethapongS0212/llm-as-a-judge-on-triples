@@ -1,0 +1,34 @@
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: textaug2023#4 -----
+PARAGRAPH:
+The messages from Twitter will be collected using the Tweepy API and Python language to request data and then store that data as a dataset to make sure that the messages are imbalanced. We can measure it using the following equation 1: imbalance rate (IR), where M and m represent for the numbers of examples in the majority and minority classes, respectively [10]. When data in all classes to verify the imbalance rate, which can be seen in Table I when the IR value of any group is less than 0.50. This indicates that there is not enough data to train that group, and additional data augmentation is necessary.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: strabismus2026#26 -----
+PARAGRAPH:
+Following the comparative analysis, the optimal architecture was integrated for potential deployment. The RT-DETR model was finalized by training on the complete eye landmark dataset. Subsequently, the RT1–RT5 features were extracted from the detected landmarks of all participants to serve as structured inputs for the final Random Forest classifier. This integrated pipeline ensures that the classification process remains grounded in quantifiable geometric measurements.
+
+TRIPLES EXTRACTED (2):
+    (RT-DETR) --trainedon--> (complete eye landmark dataset)
+    (Random Forest) --uses--> (RT1–RT5 features)
+
+----- para_key: parkingyolo2023#21 -----
+PARAGRAPH:
+Object detection algorithms such as YOLOv8 use Mean Average Precision (mAP) to validate the performance of object detection . Since the objective of this work was to track vehicles across a frame, it was essential to validate the results with an object tracking algorithm. MOTA (Multiple Object Tracking Algorithm) metrics were used to validate the results. MOTA metrics measure the accuracy of both detection and tracking algorithms . Firstly, it was essential to define True Positive (TP), False Positive (FP), False Negative (FN), and True Negative (TN). Table 2 shows the detailed definitions. The formula for MOTA is shown in Equation (3). FN refers to no match for the ground truth object . This can occur because of various reasons, such as the vehicle being too far away from the camera, weather, different illumination, etc. FP refers to no ground truth object but a match by the algorithm. There was one instance of FP where the reflection of the vehicle was considered as a vehicle . False IDs refer to identification switches between the tracked vehicles . GT refers to total ground truth object . MOTA = 1 −∑t FNt + FPt + IDSt True Positive (TP) Vehicle is present and the algorithm can track vehicle . True Negative (TN) Vehicle is not present and the algorithm does not track vehicle False Positive (FP) Vehicle is not present but the algorithm tracks vehicle . False Negative (FN) Vehicle is present but the algorithm does not track vehicle
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: llamacorrupt2025#4 -----
+PARAGRAPH:
+We assess Meta's Llama -3.2-1B-Instruct [4] a 16-layer Transformer model acquired from Hugging Face [5] The model underwent evaluation on the GLUE-QNLI dataset [6] with perfor- mance assessed through BERT's F1 score and ROUGE metrics [7] Our experiments indicate that randomly zeroing 10–15% of the model's parameters signifies the threshold at which the LLM starts deteriorating. Moreover, the experiments show that corruption in the earlier layers has less impact than in the later layers, suggesting that the sensitivity of the model increases towards the deeper layers. In addition, we have noted that the feed-forward components are more susceptible to parameter corruption than the self-attention matrices. The above data suggests that the submodules of the Trans- former architecture respond to perturbations in a wide range of ways. Our research offers insights into the structural vulnerabilities of LLMs and their resilience to internal disruptions, especially regard- ing future LLM implementations on microchips [8] By highlighting these limitations, we seek to promote the advancement of language models that are more robust and fault-tolerant, thereby ensuring their dependability in crucial applications, particularly those imple- mented on hardware systems .
+
+TRIPLES EXTRACTED (4):
+    (Llama -3.2-1B-Instruct) --uses--> (Transformer)
+    (Llama -3.2-1B-Instruct) --trainedon--> (Hugging Face)
+    (performance) --evaluates--> (BERT's F1 score)
+    (performance) --evaluates--> (ROUGE metrics)

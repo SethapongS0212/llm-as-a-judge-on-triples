@@ -1,0 +1,35 @@
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: oxidecrack2025#11 -----
+PARAGRAPH:
+Oversampling is a machine learning technique that helps balance imbalanced datasets by reducing model bias from imbalanced datasets by adding the number of instances in the minority class. Several techniques have been highlighted in recent reviews30. The Synthetic Minority Over-sampling Technique (SMOTE)31 is a well- known and dependable oversampling technique for resolving class imbalance. It effectively balances datasets while lowering the risk of overfitting and underfitting by using nearest neighbors to generate synthetic samples uniformly across the feature space. Although techniques such as Adaptive Synthetic Sampling (ADASYN)32 and Border-line SMOTE33 provide specific improvements, like concentrating on decision boundaries or adjusting to data density. They frequently have increased computational costs and complexity. Although helpful in lowering noise, K-Means SMOTE34 can be more challenging because it depends on precise clustering. The Synthetic Minority Over-sampling Technique (SMOTE) is an excellent option for many imbalanced data problems because it balances ease of use, efficacy, and broad applicability. In our study, our dataset contains 71 features and 233 samples, where the spallation class was about 15% of all data entries. To observe the behavior of both classes against their features, our study visualized the data by a scatter plot, which was limited by a 2-dimensional display.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: llamacorrupt2025#6 -----
+PARAGRAPH:
+There are multiple options when selecting a model for this study. Due to the limitations of computational resources in the experi- ment as it was conducted on a personal computer, we have chosen Llama -3.2-1B-Instruct [4] a Transformer -based model [5] as our initial candidate due to its popularity as an open-source model and its availability on Hugging Face. Its size is appropriately balanced for the available resources. This model consists of 16 layers, where each layer primarily performs self-attention and feed-forward com- putations. The self-attention (Attn) mechanism involves three key matrices: Query (Q or Attn-Q), Key (K or Attn-K), and Value (V or Attn-V), while the feed-forward network (FF) consists of three matrices: Gate (or FF-Gate), Up (or FF-Up), and Down (or FF-Down) [1] [5] as illustrated in Fig. 1 In future experiments, we plan to extend this methodology to evaluate other models, ensuring a broader understanding of param- eter corruption across different architectures.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: pesticide2025#23 -----
+PARAGRAPH:
+The application of machine learning methodology for predicting Carbosulfan concentrations has yielded acceptable outcomes. Accuracy evaluations based on the comparison between predicted and actual concentrations, as summarized in Table 4, indicate that the XGB algo rithm achieved the lowest error of combined unseen data sets of 3.29 %. Across all datasets, the XGB algorithm demonstrated marginally su perior performance compared to SVR, RF, and MLP. Despite the implementation of the cross-validation technique, a notable increase in errors on the test set compared to the train set was evident across all algorithms, indicating potential overfitting to the training data. 20 illustrates a graphical comparison between the predicted and actual concentrations using the XGB algorithm. Predom inant errors in prediction were observed at lower concentration levels (below 500 mg⋅L−1), where the average lightness change was below 0.5 L* per 50 mg⋅L−1.
+
+TRIPLES EXTRACTED (3):
+    (XGB algorithm) --comparesagainst--> (SVR)
+    (XGB algorithm) --comparesagainst--> (RF)
+    (XGB algorithm) --comparesagainst--> (MLP)
+
+----- para_key: pesticide2025#20 -----
+PARAGRAPH:
+The image processing methodology, consisting of object detection, morphology, and corner detection, successfully corrected the misalign ment between each reference spectral band. 16 depicts an extreme case of misalignment employed to validate the method's efficacy. The camera was intentionally rotated and repositioned to create these mis alignments. The developed methodology successfully captured the spectral band area and corrected rotational misalignment, resulting in consistent band representation. This approach ensures the reliability of spectral data acquisition despite variations in camera positioning. In addition, the light correction step effectively addressed variations in lightness within the reference spectral bands. Significant differences in lightness were observed, as illustrated in Fig. 17A, with the standard deviation of average lightness calculated at 1.30 L*. The lightness of each image was adjusted to a uniform value, as shown in Fig. This adjustment substantially reduced the standard deviation to 1.34 × 10−4 L*. The calculated offset value was then applied to the corresponding analysed side of the spectral band, resulting in a set of spectral bands exhibiting a discernible trend, as presented in Fig.
+
+TRIPLES EXTRACTED (4):
+    (image processing methodology) --comprises--> (object detection)
+    (image processing methodology) --comprises--> (morphology)
+    (image processing methodology) --comprises--> (corner detection)
+    (light correction step) --addresses--> (variations in lightness within the reference spectral bands)

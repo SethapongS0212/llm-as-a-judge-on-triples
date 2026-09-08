@@ -1,0 +1,38 @@
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: vehiclemake2025#17 -----
+PARAGRAPH:
+Input: image_data //a vehicle RGB image sizing 244∗244∗3 Output: vm_pred //the prediction result of vehicle make //Filter-Block 1: Function Filter-Block(filter-size, map-in) 2: m ←Multi-layer-filter(filter=filter-size, map-in) //Model Structure 1: map ←Filter-Block(32, image_data) 2: map ←Filter-Block(64, map) 3: map ←Filter-Block(128, map) 4: map ←Filter-Block(256, map) 5: map ←Filter-Block(512, map) 6: map ←Filter-Block(1024, map) 7: map ←Flatten_GAP(map) 8: map ←Dense_256(map) 9: map ←Dense_5(map) 10: vm_pred ←softmax(map) After passing through all the Filter-Blocks, the model uses Global Average Pooling to flatten the 3D matrix into a 1D matrix. This is followed by a Dense layer with 256 units using the ReLU activator and a final Dense layer with 5 units using the SoftMax activator to predict the five vehicle brands. The other two models, which incorporate Filter-Block-DW and Filter-Block-DR, have structures similar to the CTv1 model, differing only in the Filter-Block sections. All other operational layers remain the same. The structures of all three model concepts are shown in the model pseudocode named ''Model Algorithm'' and FIGURE 9 following the pseudocode for the overall three model structures.
+
+TRIPLES EXTRACTED (7):
+    (Filter-Block) --comprises--> (Multi-layer-filter)
+    (Filter-Block) --uses--> (Multi-layer-filter)
+    (Filter-Block) --configures--> (model structure)
+    (Filter-Block-DW) --comprises--> (Filter-Block)
+    (Filter-Block-DR) --comprises--> (Filter-Block)
+    (Filter-Block) --produces--> (map)
+    (Model Algorithm) --produces--> (model structures)
+
+----- para_key: linkpred2015#5 -----
+PARAGRAPH:
+LODAC developed ontology and dataset describing taxon concept in RDF. For ex- ample, a rust fungus species named Melampsora yezoensis from genus Melampsora, and a host plant species named Salix pierotii from the genus Salix can be expressed as the following statements. To define an interaction between species, in this case, commensalism of rust fungi and hosts can be organized by a predicate named species:growsOn. Thus, the rela- tionship between Melampsora yezoensis and Salix pierotii becomes lodac:Melampsora_yezoensis species:growsOn lodac:Salix_pierotii. There are 903 URIs of fungi, 2001 URIs of hosts, and 2,966 triples formed by the property species:growsOn in our dataset. This data also acts as a bipartite graph whose one side is a set of fungi and the other side is a set of hosts. However, the oc- currence appears to suggest that the dataset is very sparse because the average out- degree of fungi is about 3.28 and the average in-degree of hosts is about 1.48. Thus, the density of actual interactions is approximately 0.15% of the maximum number of all possible links. It means that more than 1.8 millions of links are theoretically calcu- lated, and further more relationships await to be discovered. Without any proper strat- egies, this activity may lead to high experimental cost, so the link prediction approach becomes a solution to handle this situation. (d) Red dash lines are predicted links according to biological classification of A-side nodes.
+
+TRIPLES EXTRACTED (2):
+    (LODAC) --produces--> (ontology and dataset describing taxon concept in RDF)
+    (species:growsOn) --addresses--> (commensalism of rust fungi and hosts)
+
+----- para_key: linkpred2015#24 -----
+PARAGRAPH:
+Besides, appropriate values for α, β, and γ appearing in the equation (4) were de- termined. As we selected and analyzed top list of α, β, and γ that provided high AUC in every condition of the dataset, there was no pattern among these values and there was no clear implication on the significance of scoring functions. Although the golden values of all coefficients cannot be claimed, a closer look at the data and Fig. 4 indi- cated that γ should be smaller than α and β in general.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: roadwaylight2018#20 -----
+PARAGRAPH:
+There are timestamps, latitudes, longitudes, light intensities, accelerations (aX, aY, and aZ), rotations (gX, gY, and gZ), and the supervised classifications of pavement failures. The accelerations and rotations are 2274 Sensors and Materials, Vol. 10 (2018) changed into their absolute values during data analysis. As we observed, the mean absolute values of the data (aX, aY, aZ, gX, gY, and gZ) of regular road surfaces are (2.687, 2.795, 1.894, 2.897, 3.304, and 2.068), those of pavement failures are (2.805, 3.096, 9.927, 10.787, 13.168, and 2.698), and those of speed bumps are (2.375, 1.710, 9.984, 2.361, 9.464, and 1.182). Next, in order to understand the data characteristics, a scatter matrix of every pair of acceleration and rotation data with labels of pavement failures is plotted, as shown in Fig. As we have a closer look at the visualization, some pairs can be simply separated by a linear classifier and some other pairs may need to be classified by a nonlinear method. Thus, we use different classification methods,(13) namely, decision tree, linear classification, ANN, and SVM, to analyze the dataset. Parameters of these methods are configured to support either linear or nonlinear separable data as follows: • The linear classification is implemented to perform classification analysis and find some key attributes by considering their weights resulting from the classifier model.
+
+TRIPLES EXTRACTED (2):
+    (linear classification) --uses--> (linear separable data)
+    (linear classification) --produces--> (key attributes)

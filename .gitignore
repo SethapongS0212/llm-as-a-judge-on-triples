@@ -1,0 +1,54 @@
+# ─── SECRETS — never commit ──────────────────────────────────────────────────
+# .env holds live SEMANTIC_SCHOLAR / GROQ / GEMINI / OPENROUTER keys.
+# citation/apikey.env is a SECOND credential file — found only by an explicit
+# pre-commit scan, not by the obvious `.env` pattern. Both are excluded by name
+# AND by the catch-all patterns below.
+.env
+.env.*
+!.env.example
+**/*.env
+**/apikey*
+*.key
+*secret*
+*credential*
+
+# ─── COPYRIGHTED PAPER PDFs — do not redistribute ───────────────────────────
+# The corpus is 20 published papers; 10 are paywalled (IEEE/Springer/Elsevier/ACM).
+# papers/manifest.csv carries the DOIs and access status so anyone can obtain them
+# legitimately. fetch_corpus.sh downloads the open-access subset.
+*.pdf
+papers/*.pdf
+bulk-download/
+
+# ─── Large regenerable artifacts ────────────────────────────────────────────
+# prompts.jsonl regenerates from the parsed HTML; graphml regenerates from triples.json.
+output/*/kg/*/*/prompts.jsonl
+output/*/kg/*/*/*.graphml
+output/**/*.graphml
+output/*/no-llm/
+output/*/fast/
+output/acl/
+output/global_kg/
+summary/
+
+# ─── Session scratch ────────────────────────────────────────────────────────
+ontology_eval_backup_*/
+verdict_backup_*/
+before_filter.json
+ceo_before.json
+*.log
+chat_upload/
+judge_upload/
+
+# ─── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# stray archives
+*.zip
+
+# stale session backups
+output_backup_*/
+triples_open/

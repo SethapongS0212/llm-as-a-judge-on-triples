@@ -1,0 +1,43 @@
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: traveltime2022#24 -----
+PARAGRAPH:
+As mentioned, we aimed to use a time-series technique to make a prediction of travel time along each selected road segment. We conducted three experiments to model our method. First, the time-series-based prediction techniques ARIMA, SVR, LSTM, and ConvLSTM were compared to decide which one would be the baseline. Second, self- attention was used to improve the LSTM by comparison with the original LSTM. Finally, several filter methods used to pre-process the time-series data were compared. In our experiment, we evaluated the performance of each model using a train–test split. In this case, the ordered TTR dataset of each road was split into third sets: a training set (60%), a validation set (20%), and a test set (20%), as shown in Figure 7a. The training set was used to train the model; the validation set was used to validate the loss to the adjusted hyperparameters during learning; the test set was used to test the performance of the trained model. In every iteration of the predictions, there were 24 continuous input data points as a sliding window size denoting 24 h, and the model used these to produce a predicted output representing the next hour. In other words, we used a travel time of 24 h to predict the following-hour travel time iteratively, as depicted in Figure 7b.
+
+TRIPLES EXTRACTED (11):
+    (ARIMA) --comparesagainst--> (SVR)
+    (ARIMA) --comparesagainst--> (LSTM)
+    (ARIMA) --comparesagainst--> (ConvLSTM)
+    (SVR) --comparesagainst--> (LSTM)
+    (SVR) --comparesagainst--> (ConvLSTM)
+    (LSTM) --comparesagainst--> (ConvLSTM)
+    (ordered TTR dataset) --splitfrom--> (training set (60%))
+    (ordered TTR dataset) --splitfrom--> (validation set (20%))
+    (ordered TTR dataset) --splitfrom--> (test set (20%))
+    (model) --trainedon--> (training set (60%))
+    (model) --evaluatedon--> (test set (20%))
+
+----- para_key: reststop2018#10 -----
+PARAGRAPH:
+As we review techniques about future location prediction and take a look at the data and the association between rest stops and route paths in Thailand, we found that there are three aspects for making prediction. These aspects are formalized into scoring functions that are based on (1) the frequent pattern between rest stops, (2) the directions of connected rest stops, and (3) the popularity of the rest stop. These concepts are described in the following steps. It is noted that dataset is based on the schema in Eq. The prediction will be done by predicting s2 based on the given s1 and s0, while vtype and time1 are used for demonstrating the accuracy of our approach based on the type of vehicles and the periods of time. In addition, the candidates of the next rest stop or s2 are selected from any rest stops that are in the range from the current rest stop s1. The proper range can be configured such as 300 km from s1. Scoring Function based on the Frequent Pattern between Rest Stops (SF) This function predicts the next rest stop (s2) on the basis of the association between s2 and the current rest stop (s1) together with the previous rest stop (s0). This technique is grounded by the prediction based on association method from Morzy (2006 and 2007), Yavas et al. (2008), and Monreale et al. In this paper, we find the possibility of a vehicle that parks at the given s0 and s1, and then that vehicle also parks at the s2.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: trafficspeed2021#12 -----
+PARAGRAPH:
+As we stated in the beginning of the paper, this behavior is similar to the prediction of time-series data for stock prices. As we found, there are many km stones have these behaviors and their speeds of some periods can be predicted with satisfying performance. Furthermore, these associations might be changed depended on the states of data, so the models of each predictions can be updated continuously with the updated datasets. A closer look at the result can be interpreted that many km stones' speed can be predicted in next 5 to 20 minutes using the current speeds at neighbor km stones. The accuracy value provides an acceptable result for using in an application; however, the accuracy has chance to improve. As we suspected, some km stones have a good behavior in terms of linear associations with other neighbors, but not all. Since this study places important to the linear equation, any models being satisfied the linear regression are reserved to use for the speed prediction under possible conditions of times and places. Nevertheless, for other models that are not satisfying linear associations, we will further analyze and find some proper techniques to solves. As we learn, the future work for enhancing this research might be some non-linear regressors such as multinomial regression, exponential smoothing, support vector machine regression, long-short term memory (LSTM) networks, etc. [8], in order to improve the accuracy of overall prediction models.
+
+TRIPLES EXTRACTED (4):
+    (multinomial regression) --addresses--> (improving the accuracy of overall prediction models)
+    (exponential smoothing) --addresses--> (improving the accuracy of overall prediction models)
+    (support vector machine regression) --addresses--> (improving the accuracy of overall prediction models)
+    (long-short term memory (LSTM) networks) --addresses--> (improving the accuracy of overall prediction models)
+
+----- para_key: csysguard2024#27 -----
+PARAGRAPH:
+Level-0 learners comprise base models designed for time- series prediction that utilize datasets aggregated directly from the system for their training. At each predefined interval, these models use the most recent dataset to predict forthcoming values, considering two key elements: the predetermined count of past data points (observation steps) and the quantity of future data points ( prediction steps) to be predicted. 7 visualizes the sequence of time series predictions, showcasing observation steps ''o'' and prediction steps ''p'' for each interval ''k'' across ''n'' predictions. cSysGuard allows the adjustment of these parameters to meet user-specific requirements. In this study, we configured the settings with 30 observation steps and five forecast steps, aligning the interval with the forecasting steps. Our setup has operated various models, including the ARIMA, SARIMA, ETS, CNN, TCN, RNN, GRU, and LSTM. Each brings a unique forecasting approach, enabling us to capture various aspects and patterns within the data. In addition to deep learning, we incorporated two hidden layers into the architecture : the first equipped with 64 neurons and the second with 32 neurons, both employing ReLU activation. We used the default settings provided by the Statsmodels [54] and TensorFlow [55] libraries. Despite this, we observed that the library's default parameter values for deep learning led to suboptimal predictions. Therefore, parameter adjustments are required.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)

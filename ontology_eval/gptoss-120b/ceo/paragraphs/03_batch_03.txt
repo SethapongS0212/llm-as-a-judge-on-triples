@@ -1,0 +1,31 @@
+
+Grade the following 4 paragraphs on C2 and C5.
+
+----- para_key: microwave2018#8 -----
+PARAGRAPH:
+As we reviewed, the ultrasonic sensor and the infrared sensor can detect the movement of an object, however, they do not work well in some conditions such as temperature change, turbidity from dirt or mud, water drops, etc. For this reason, the microwave sensor becomes a proper device for detecting the kick motion, because it works well in both indoor and outdoor environment. This sensor uses an electromagnetic field between a transmitter and a receiver as depicted in Fig. 2, and it takes advantage from the doppler effect to evaluate the doppler shift or change in the frequencies or the wavelengths of reflections from a moving object [5]. Thus, it can detect the movement of a foot that is viewed as a moving object as well. When the sensor detects any movements of a human's part or an object such as kicking, walking, passing through, etc.; the frequencies of the reflected signals are shaped differently as shown in Fig. Most patterns of the signals can be clearly recognized by a human recognition, because the signal of the kick gesture commonly consists of a spike range in the middle of a sliding window. It is resulted from the motion of a foot during kicking. When start kicking, the speed of the foot is a little bit low because it moves from the standing position. During the foot kick to the end and start pulling the foot back, the speed of the foot is rising rapidly, so the reflect frequency become spike in the middle of the kick action.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: linkpred2015#12 -----
+PARAGRAPH:
+To prepare data for the prediction process, GBipt=(NFungi, NHosts, LExist) is constructed by transforming RDF dataset into a bipartite graph; then GProjFungi = (NFungi, EProjFungi) is built by 𝐸!"#$%&'() = (𝑓!, 𝑓!) 𝑓!, 𝑓! ∈𝑁!"#$% 𝑎𝑛𝑑 Γ(𝑓!) ∩Γ(𝑓!) ≠∅ (5) Next, PCS(f,h) is derived from the idea of [12], if a host h is frequently shared by most fungi under the same community as fungus f, the fungus f is more likely found at the host h. This research considered Naïve Bayes [17], which is a likelihood classification function, to evaluate the probability of finding the fungus f at the host h. Because cluster is known, the probability to find h in the community of f is simply defined by where MC(f), which stands for "Members of Community of", returns all members of the community of the fungus f; and 1{(fi,h)∈LExist} returns 1 if a link (fi,h) is existent, otherwise 0; and 1{(fi,hj)∈LExist} returns 1 for every existent link given by fi. Last, PBC(f,h) is computed based on probability of a host h comparing to all hosts shared by all fungi under the same biological classification as the fungus f. This func- tion is expressed by The definition is similar to equation (7), whereas the term MB(f), which stands for "Members of Biological classification of", returns the set of all fungi under the same biological classification than a fungus f.
+
+TRIPLES EXTRACTED (0):
+    (none extracted)
+
+----- para_key: microwave2018#10 -----
+PARAGRAPH:
+A kick activation method is one of solutions for addressing a hand-free operation issue. This paper attempts to detect a kicking gesture from a microwave sensor because it works well under various conditions of environment especially in the outdoor areas such as opening a car's trunk. The idea is that when a human kicks into the air nearby the sensor, signal data from the sensor are generated. After that, a microcontroller processes a one-second-length sliding window of the sensor's signal for classifying the kick and non-kick actions based on the supervised dataset. Signals between these actions are clearly distinguished using the signal visualization. It also found that the logistic regression, which is a known data analytic method, can be used as a classification method to detect the kick gesture; because it provides the best accuracy among all selected classifiers. The parameters of the fit model can be implemented in a microcontroller for creating any kick-activated applications. Furthermore, in fact, there are several kinds of kicking actions such as fast kicking, slow kicking, kicking by left or right foot, etc. In the future, a kick detector will be learned with many kinds of kicking gestures in order to support various inputs from different kick actions. In this case, more features and some multi-label classifiers should be adopted.
+
+TRIPLES EXTRACTED (2):
+    (kick activation method) --addresses--> (hand-free operation issue)
+    (logistic regression) --achieves--> (best accuracy)
+
+----- para_key: parkingyolo2023#6 -----
+PARAGRAPH:
+In its early years, the machine learning-based object detection pipeline consisted of two primary steps: ROI extraction and object classification [15]. Based on Zhao et al. [16], object detection models consist of three phases: selection of region of interest, extraction of features, and, finally, classification of objects . One common ROI extraction technique uses sliding windows that move various scales across an image. Exhaustive sliding is, however, very challenging to apply in practice due to its great processing complexity. Deep Learning algorithms are extensively implemented for object detection tasks. They can mainly be categorized into two types, as shown in Figure 2. You Only Look Once (YOLO) [17] and Single Shot MultiBox Detector (SSD) [18] consider detection tasks as a regression problem and are one stage networks. On the other hand, algorithms such as Region-Based CNN (RCNN) [10] firstly locate the region of interest, which is further classified into classes. As depicted in Figure 3, The R-CNN model uses a selective search algorithm to determine the number of candidates for bounding box object regions, and then features are fed into CNN, which acts as a feature extractor. Support Vector Machine (SVM) is used to classify whether the object is present within that candidate region by utilizing the retrieved features. R-CNN can perform well in various object detection tasks, but training these models takes significant time, and the speed of detection is limited [19].
+
+TRIPLES EXTRACTED (1):
+    (R-CNN model) --uses--> (selective search algorithm)
